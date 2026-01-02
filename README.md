@@ -1,21 +1,16 @@
-# 🎙️ Transcriptor de Reuniones y WhatsApp
+# 🎙️ Transcriptor de Audio Pro (Whisper + Firebase)
 
-Este es un transcriptor profesional que utiliza la tecnología **OpenAI Whisper**. Está optimizado para funcionar en servidores (VPS) y procesar audios de WhatsApp (.ogg), MP3 y WAV.
+Este proyecto es una herramienta avanzada para transcribir audios (MP3, WAV, M4A) y videos (MP4) utilizando la IA de Whisper.
 
-## 🛠️ Requisitos previos para el VPS
-Antes de instalar las librerías de Python, el sistema operativo del servidor debe tener instalado **FFmpeg**.
+## ✨ Características
+- **🔒 Login Seguro**: Acceso controlado por lista de correos autorizados.
+- **🧠 Contexto de IA**: Permite añadir palabras clave para mejorar la precisión técnica.
+- **📜 Historial**: Transcripciones guardadas en Firebase con opción de eliminar.
+- **🐳 Docker Ready**: Configurado para ejecutarse en cualquier lugar.
 
-- **En Ubuntu/Debian:** `sudo apt update && sudo apt install ffmpeg -y`
-
-## 🚀 Instalación y Despliegue
-1. Clonar el repositorio.
-2. Crear un entorno virtual: `python -m venv .venv`
-3. Activar el entorno:
-   - Linux: `source .venv/bin/activate`
-   - Windows: `.venv\Scripts\activate`
-4. Instalar dependencias: `pip install -r requirements.txt`
-5. Iniciar la aplicación: `streamlit run app.py`
-
-## 🔐 Acceso
-- **Usuario:** admin
-- **Contraseña:** 1234
+## 🚀 Instalación con Docker
+1. Clona el repositorio.
+2. Agrega tus archivos `.env` y `firebase-key.json` en la raíz.
+3. Construye la imagen:
+   ```bash
+   docker build -t transcriptor-audio .
